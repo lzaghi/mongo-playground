@@ -1,21 +1,11 @@
 use("commerce");
 
-db.produtos.updateMany(
-  {},
-  { $set: { avaliacao: 0 } }
-)
-
-db.produtos.updateMany(
-  { tags: { $all: ['bovino'] } },
-  { $inc: { avaliacao: 5 } }
-)
-
-db.produtos.updateMany(
-  { tags: { $all: ['ave'] } },
-  { $inc: { avaliacao: 3 } }
-)
+db.produtos.updateOne(
+  { nome: 'Big Mac'},
+  { $currentDate: { ultimaModificacao: true } }
+);
 
 db.produtos.find(
-  { },
-  { _id: 0, nome: 1, avaliacao: 1}
+  { ultimaModificacao: { $exists: true } },
+  { _id: 0, nome: 1 }
 );
