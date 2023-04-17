@@ -3,10 +3,6 @@ use("commerce");
 db.produtos.countDocuments({});
 
 db.produtos.find(
-  { $or: [
-      { curtidas: 36 },
-      { vendidos: 85 }
-    ]
-  },
-  { _id:0 , nome: 1, vendidos: 1, curtidas: 1 }
+  { curtidas: { $gt: 10, $lt: 100}},
+  { _id:0, nome: 1, curtidas: 1 }
 );
