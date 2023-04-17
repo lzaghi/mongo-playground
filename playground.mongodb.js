@@ -2,13 +2,18 @@ use("commerce");
 
 db.produtos.updateMany(
   {},
-  { $set: {
-      criadoPor: 'Ronald McDonald'
+  { $push: {
+      valoresNutricionais: {
+        $each: [
+
+        ],
+        $slice: 3
+      }
     }
   }
-);
+)
 
 db.produtos.find(
-  {},
-  { _id: 0, nome: 1, criadoPor: 1}
+  { ingredientes: { $all: ['picles'] } },
+  { _id: 0, nome: 1, ingredientes: 1, valoresNutricionais: 1}
 );
