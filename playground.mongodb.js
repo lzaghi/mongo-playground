@@ -3,6 +3,9 @@ use("commerce");
 db.produtos.countDocuments({});
 
 db.produtos.find(
-  { curtidas: { $gt: 10, $lt: 100}},
-  { _id:0, nome: 1, curtidas: 1 }
+  { 
+    vendidos: { $ne: 50},
+    tags: { $exists: false} 
+  },
+  { _id:0, nome: 1, vendidos: 1 }
 );
