@@ -1,10 +1,10 @@
 use("commerce");
 
-db.produtos.updateMany(
-  {},
+db.produtos.updateOne(
+  { nome: "Quarteirão com Queijo"},
   {
-    $pull: {
-      ingredientes: 'cebola'
+    $pop: {
+      ingredientes: -1
     }
   }
 )
