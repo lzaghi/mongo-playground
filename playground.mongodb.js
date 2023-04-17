@@ -1,11 +1,13 @@
 use("commerce");
 
-db.produtos.updateOne(
-  { nome: 'Big Mac'},
-  { $currentDate: { ultimaModificacao: true } }
+db.resumoProducts.insertOne(
+  { 
+    franquia: "McDonalds",
+    totalProdutos: db.produtos.countDocuments({})
+  },
 );
 
-db.produtos.find(
-  { ultimaModificacao: { $exists: true } },
-  { _id: 0, nome: 1 }
+db.resumoProducts.find(
+  {},
+  { _id: 0, franquia: 1, totalProdutos: 1}
 );
