@@ -2,18 +2,20 @@ use("commerce");
 
 db.produtos.updateMany(
   {},
-  { $push: {
-      valoresNutricionais: {
-        $each: [
+  { $set: { avaliacao: 0 } }
+)
 
-        ],
-        $slice: 3
-      }
-    }
-  }
+db.produtos.updateMany(
+  { tags: { $all: ['bovino'] } },
+  { $inc: { avaliacao: 5 } }
+)
+
+db.produtos.updateMany(
+  { tags: { $all: ['ave'] } },
+  { $inc: { avaliacao: 3 } }
 )
 
 db.produtos.find(
-  { ingredientes: { $all: ['picles'] } },
-  { _id: 0, nome: 1, ingredientes: 1, valoresNutricionais: 1}
+  { },
+  { _id: 0, nome: 1, avaliacao: 1}
 );
