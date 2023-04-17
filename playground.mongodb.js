@@ -3,8 +3,8 @@ use("commerce");
 db.produtos.find(
   { valoresNutricionais: {
       $elemMatch: {
-        tipo: 'calorias',
-        quantidade: { $lt: 500 }
+        tipo: 'proteínas',
+        percentual: { $gte: 30, $lte: 40 }
       }
     }
   },
