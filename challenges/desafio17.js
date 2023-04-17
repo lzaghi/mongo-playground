@@ -1,11 +1,11 @@
-db.resumoProducts.insertOne(
+db.resumoProdutos.insertOne(
   { 
     franquia: "McDonalds",
     totalProdutos: db.produtos.countDocuments({})
   },
 );
 
-db.resumoProducts.find(
+db.resumoProdutos.find(
   {},
   { _id: 0, franquia: 1, totalProdutos: 1}
 );
