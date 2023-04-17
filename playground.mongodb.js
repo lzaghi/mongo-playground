@@ -1,12 +1,6 @@
 use("commerce");
 
 db.produtos.find(
-  { valoresNutricionais: {
-      $elemMatch: {
-        tipo: 'proteínas',
-        percentual: { $gte: 30, $lte: 40 }
-      }
-    }
-  },
-  {_id: 0, nome: 1}
+  { nome: { $nin: ['Big Mac', 'McChicken'] } },
+  { _id: 0, nome: 1, curtidas: 1, vendidos: 1 }
 );
