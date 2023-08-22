@@ -153,5 +153,5 @@ Para rodar esta aplicação é necessário ter o Docker instalado em sua máquin
 ```
 (substitua ```[n]``` pelo número do desafio que deseja executar)
 
-As queries podem ser encontradas nos arquivos ```desafio[n].mongodb.js```, na pasta ```chalenges```, e elas também podem ser <strong> executadas diretamente no VSCode com a extensão do MongoDB</strong>.
+As queries podem ser encontradas nos arquivos ```desafio[n].mongodb.js```, na pasta ```challenges```, e elas também podem ser <strong> executadas diretamente no VSCode com a extensão do MongoDB</strong>.
 
