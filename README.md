@@ -1,13 +1,60 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+<details><summary><strong>Exemplo da estrutura de um documento:</strong></summary></br>
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+```json
+{
+    "_id": {
+      "$oid": "5f280af11532b7276329ba47"
+    },
+    "nome": "Big Mac",
+    "ingredientes": [
+      "hamburguer",
+      "alface",
+      "queijo",
+      "molho especial",
+      "cebola",
+      "picles",
+      "pão com gergelim"
+    ],
+    "tags": [
+      "bovino",
+      "pão"
+    ],
+    "valoresNutricionais": [
+      {
+        "tipo": "calorias",
+        "quantidade": 502,
+        "unidadeMedida": "kcal",
+        "percentual": 25
+      },
+      {
+        "tipo": "carboidratos",
+        "quantidade": 45,
+        "unidadeMedida": "gramas",
+        "percentual": 15
+      },
+      {
+        "tipo": "sódio",
+        "quantidade": 1047,
+        "unidadeMedida": "miligramas",
+        "percentual": 44
+      },
+      {
+        "tipo": "proteínas",
+        "quantidade": 27,
+        "unidadeMedida": "gramas",
+        "percentual": 36
+      },
+      {
+        "tipo": "lipídios",
+        "quantidade": 25,
+        "unidadeMedida": "gramas",
+        "percentual": 45
+      }
+    ],
+    "descricao": "Não existe nada igual\nDois hambúrgures, alface, queijo, molho especial, cebola e picles num pão com gergelim",
+    "curtidas": 145,
+    "vendidos": 137
+  }
+```
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+</details>
